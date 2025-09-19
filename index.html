@@ -1,70 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dropdown Menu</title>
-  <style>
-    /* Basic styling for the navigation bar */
-    .navbar {
-      background-color: #333;
-      overflow: hidden;
-      display: flex;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-    .navbar > li {
-      position: relative;
-    }
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  margin: 0;
+  background-color: #f9f9f9;
+}
 
-    .navbar a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      padding: 14px 20px;
-    }
+.dropdown-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-    .navbar a:hover {
-      background-color: #575757;
-    }
+select {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
 
-    /* Dropdown menu styling */
-    .dropdown {
-      display: none;
-      position: absolute;
-      background-color: #444;
-      min-width: 160px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-    }
+.item-list {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
 
-    .dropdown a {
-      padding: 12px 16px;
-    }
+.item-list li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
 
-    .dropdown a:hover {
-      background-color: #575757;
-    }
+/* Responsive styles */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
 
-    /* Show dropdown on hover */
-    .navbar li:hover .dropdown {
-      display: block;
-    }
-  </style>
-</head>
-<body>
-  <ul class="navbar">
-    <li><a href="#home">Home</a></li>
-    <li>
-      <a href="#services">Services</a>
-      <ul class="dropdown">
-        <li><a href="#web-design">Web Design</a></li>
-        <li><a href="#seo">SEO</a></li>
-        <li><a href="#marketing">Marketing</a></li>
-      </ul>
-    </li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</body>
-</html>
+  .dropdown-container {
+    padding: 0.75rem;
+  }
+
+  select, .item-list li {
+    font-size: 0.9rem;
+  }
+}
+
