@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdown Menu</title>
+  <style>
+    /* Basic styling for the navigation bar */
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+      display: flex;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+    }
+
+    .navbar a:hover {
+      background-color: #575757;
+    }
+
+    /* Dropdown menu styling */
+    .dropdown {
+      display: none;
+      position: absolute;
+      background-color: #444;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown a {
+      padding: 12px 16px;
+    }
+
+    .dropdown a:hover {
+      background-color: #575757;
+    }
+
+    /* Show dropdown on hover */
+    .navbar li:hover .dropdown {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <ul class="navbar">
+    <li><a href="#home">Home</a></li>
+    <li>
+      <a href="#services">Services</a>
+      <ul class="dropdown">
+        <li><a href="#web-design">Web Design</a></li>
+        <li><a href="#seo">SEO</a></li>
+        <li><a href="#marketing">Marketing</a></li>
+      </ul>
+    </li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</body>
+</html>
